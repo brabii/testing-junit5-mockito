@@ -1,5 +1,7 @@
 package com.testing.services;
 
-public class VetService {
+import com.testing.model.Vet;
+
+public interface VetService extends CrudService<Vet, Long>{
 
 }

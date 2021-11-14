@@ -1,5 +1,7 @@
 package com.testing.repositories;
 
-public class VetRepository {
+import com.testing.model.Vet;
+
+public interface VetRepository extends CrudRepository<Vet, Long>  {
 
 }

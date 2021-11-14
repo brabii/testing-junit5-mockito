@@ -1,5 +1,7 @@
 package com.testing.fauxspring;
 
-public class ModelMap {
+import com.testing.model.Pet;
 
+public interface ModelMap {
+	void put(String pet, Pet pet1);
 }

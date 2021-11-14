@@ -1,5 +1,5 @@
 package com.testing.model;
 
-public class OwnerType {
-
+public enum OwnerType {
+	INDIVIDUAL, COMPANY
 }

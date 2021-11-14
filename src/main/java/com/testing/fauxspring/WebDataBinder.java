@@ -1,5 +1,5 @@
 package com.testing.fauxspring;
 
-public class WebDataBinder {
-
+public interface WebDataBinder {
+	void setDisallowedFields(String id);
 }

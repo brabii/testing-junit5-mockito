@@ -1,5 +1,7 @@
 package com.testing.repositories;
 
-public class VisitRepository {
+import com.testing.model.Visit;
+
+public interface VisitRepository extends CrudRepository<Visit, Long> {
 
 }

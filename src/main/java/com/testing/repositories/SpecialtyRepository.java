@@ -1,5 +1,7 @@
 package com.testing.repositories;
 
-public class SpecialtyRepository {
+import com.testing.model.Speciality;
+
+public interface SpecialtyRepository extends CrudRepository<Speciality, Long> {
 
 }

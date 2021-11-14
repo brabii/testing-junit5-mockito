@@ -1,5 +1,7 @@
 package com.testing.fauxspring;
 
-public class Model {
+public interface Model {
+	void addAttribute(String key, Object o);
 
+	void addAttribute(Object o);
 }

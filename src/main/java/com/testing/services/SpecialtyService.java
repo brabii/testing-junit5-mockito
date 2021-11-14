@@ -1,5 +1,7 @@
 package com.testing.services;
 
-public class SpecialtyService {
+import com.testing.model.Speciality;
+
+public  interface SpecialtyService extends CrudService<Speciality, Long> {
 
 }
