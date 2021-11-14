@@ -1,6 +1,6 @@
 package com.testing.services.springdatajpa;
 
-import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.atLeast;
 import static org.mockito.Mockito.atMost;
 import static org.mockito.Mockito.never;
@@ -14,6 +14,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
+import static org.mockito.Mockito.*;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 import com.testing.model.Speciality;
@@ -26,6 +27,22 @@ public class SpecialitySDJpaServiceTest {
 
 	@InjectMocks
 	SpecialitySDJpaService service;
+
+	@Test
+	void testFindByIdV2() {
+		Speciality speciality = new Speciality();
+		when(specialtyRepository.findById(1L)).thenReturn(Optional.of(speciality));
+		Speciality foundedSpeciality = service.findById(1L);
+		assertNotNull(foundedSpeciality);
+		verify(specialtyRepository).findById(anyLong());
+	}
+
+	@Test
+	void testDeleteByObject() throws Exception {
+		Speciality speciality = new Speciality();
+		service.delete(speciality);
+		verify(specialtyRepository).delete(any(Speciality.class));
+	}
 
 	/**
 	 * la méthode findById retourne un objet donc on va créer un scenario
