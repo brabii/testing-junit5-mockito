@@ -7,6 +7,10 @@ import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
+/**
+ * deuxieme methode pour initialiser les mocks
+ *
+ */
 public class IntitializeMocksWithAnnotationTest {
 	/**
 	 * declarer le mock de classe qu'on veut moquer c'est comme declarer un objet

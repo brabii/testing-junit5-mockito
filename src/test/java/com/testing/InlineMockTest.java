@@ -7,6 +7,10 @@ import java.util.Map;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 
+/**
+ *	premiere methode pour initialiser fake implementation de Map  
+ *
+ */
 public class InlineMockTest {
 
 	@Test
